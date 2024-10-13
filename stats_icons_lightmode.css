@@ -1,0 +1,333 @@
+/*
+============================================================
+STATS ICONS
+============================================================
+*/
+
+/*======= general formatting/styling stuff =======*/
+
+.stats a,
+.stats a:visited:hover {
+  border: none; /* removes underline from links */
+  color: #900; /* link color */
+}
+
+.stats a:hover,
+.stats a:visited {
+  color: #666; /* color of link hover and visited links */
+}
+
+.stats a:visited:hover {
+  color: #111; /* hover color for visited links */
+}
+
+/* slight adjustments to align stats with other elements */
+/* not the prettiest solution but it works ... */
+dl.stats {
+  margin-left: -0.25em;
+  margin-right: -0.25em;
+}
+
+/*======= setup for the stats icons =======*/
+
+/* hide the text before the stats */
+.stats dt:not(.skins .stats dt) {
+  display: none;
+}
+
+.stats dd:not(.skins .stats dd)::before {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-bottom: -0.1em;
+  margin-right: 5px;
+  content: "";
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center;
+  filter: invert(79%) sepia(0%) saturate(14%) hue-rotate(185deg) brightness(87%) contrast(87%); /* changes the color of the icons from black to gray */
+}
+
+/*======= stats icons (images) =======*/
+
+/* language */
+.stats dd.language::before {
+  background: url(https://images.squidge.org/images/2024/05/05/stats_icon_language_black.png);
+}
+
+/* words */
+.stats dd.words::before {
+  background: url(https://images.squidge.org/images/2024/05/05/stats_icon_words_black.png);
+}
+
+/* works */
+.stats dd.works::before,
+.stats dd:has(a[href$=works])::before /* works in collection */ {
+  background: url(https://images.squidge.org/images/2024/05/05/stats_icon_works_black.png);
+}
+
+/* chapters */
+.stats dd.chapters::before {
+  background: url(https://images.squidge.org/images/2024/05/05/stats_icon_chapters_black.png);
+}
+
+/* comments */
+.stats dd.comments::before {
+  background: url(https://images.squidge.org/images/2024/05/05/stats_icon_comments_black.png);
+}
+
+/* kudos */
+.stats dd.kudos::before {
+  background: url(https://images.squidge.org/images/2024/05/05/stats_icon_kudos_black.png);
+}
+
+/* bookmarks */
+.stats dd.bookmarks::before {
+  background: url(https://images.squidge.org/images/2024/05/05/stats_icon_bookmarks_black.png);
+  margin-right: 2px !important; /* needs less space, as the icon is narrower than the others */
+}
+
+/* related works (external bookmarks) */
+.stats dd.inspired::before {
+  background: url(https://images.squidge.org/images/2024/05/05/stats_icon_related-works_black.png);
+}
+
+/* hits */
+.stats dd.hits::before {
+  background: url(https://images.squidge.org/images/2024/05/05/stats_icon_hits_black.png);
+}
+
+/* collections */
+.stats dd.collections::before,
+.stats dd:has(a[href$=collections])::before /* subcollections*/ {
+  background: url(https://images.squidge.org/images/2024/05/05/stats_icon_collection_black.png);
+}
+
+/* date published */
+.stats dd.published::before {
+  background: url(https://images.squidge.org/images/2024/05/05/stats_icon_published_black.png);
+}
+
+/* date updated/completed */
+/* I have not found a way to display a different icon for each case */
+.stats dd.status::before {
+  background: url(https://images.squidge.org/images/2024/05/05/stats_icon_updated_black.png);
+}
+
+/* completion status (series) */
+.series.meta.group .stats dd:nth-of-type(3)::before {
+  background: url(https://images.squidge.org/images/2024/05/05/stats_icon_complete_black.png);
+}
+
+/* subscriptions (statistics page) */
+.stats dd.subscriptions::before {
+  background: url(https://images.squidge.org/images/2024/05/05/stats_icon_subscriptions_black.png);
+}
+
+/* comment threads (statistics page) */
+.statistics .stats dd.comments::before {
+  background: url(https://images.squidge.org/images/2024/05/05/stats_icon_comment-threads_black.png);
+}
+
+/* fandoms */
+.stats dd:has(a[href$=fandoms])::before,
+.tagset .stats dd:nth-of-type(1)::before {
+  background: url(https://images.squidge.org/images/2024/05/05/stats_icon_fandoms_black.png);
+}
+
+/* collections: bookmarked items */
+.collection.blurb .stats dd:has(a[href$=bookmarks])::before  {
+  background: url(https://images.squidge.org/images/2024/05/05/stats_icons_bookmarked-items_black.png);
+}
+
+/* collections: promts/requests */
+.stats dd:has(a[href$=requests])::before {
+  background: url(https://images.squidge.org/images/2024/05/05/stats_icon_promts_black.png);
+}
+
+/* tagsets: characters */
+.tagset .stats dd:nth-of-type(2)::before {
+  background: url(https://images.squidge.org/images/2024/05/05/stats_icon_characters_black.png);
+}
+
+/* tagests: relationships */
+.tagset .stats dd:nth-of-type(3)::before {
+  background: url(https://images.squidge.org/images/2024/05/05/stats_icon_relationships_black.png);
+}
+
+/* tagsets: additional tags*/
+.tagset .stats dd:nth-of-type(4)::before {
+  background: url(https://images.squidge.org/images/2024/05/05/stats_icon_tags-additional_black.png);
+}
+
+/* tagsets: freeform tags *//* example: https://archiveofourown.org/tag_sets/19213 */
+.tagset .meta .stats dd:nth-of-type(4)::before {
+  background: url(https://images.squidge.org/images/2024/05/05/stats_icon_tags-freeform_black.png);
+}
+
+/*
+============================================================
+STATS HOVER TEXT
+============================================================
+*/
+
+/*======= general formatting/styling stuff =======*/
+
+.stats dd {
+  position: relative;
+  display: inline-block;
+}
+
+/* text container (tooltip) */
+.stats dd::after {
+  visibility: hidden;
+  position: absolute;
+  z-index: 99999;
+  width: fit-content;
+  padding: 0.3em;
+  border-radius: 0.25em;
+  border: 1px solid #67676c;
+  background: #f9f9fb;
+  color: #2a2a2a;
+  font-size: 0.85em;
+  line-height: 1em;
+  text-align: center;
+  top: 100%;
+  left: 50%;
+  right: 50%;
+}
+
+/* makes text appear on hover */
+.stats dd:hover::after {
+  visibility: visible;
+}
+
+/*======= hover text for individual stats =======*/
+
+/* language */
+.stats dd.language::after {
+  content: "Language";
+}
+
+/* words */
+.stats dd.words::after {
+  content: "Words";
+}
+
+/* works */
+.stats dd.works::after,
+.stats dd:has(a[href$=works])::after /* works in collection */ {
+  content: "Works";
+}
+
+/* chapters */
+.stats dd.chapters::after {
+  content: "Chapters";
+}
+
+/* comments */
+.stats dd.comments::after {
+  content: "Comments";
+}
+
+/* kudos */
+.stats dd.kudos::after {
+  content: "Kudos";
+}
+
+/* bookmarks */
+.stats dd.bookmarks::after {
+  content: "Bookmarks";
+}
+
+/* related works (external bookmarks) */
+.stats dd.inspired::after {
+  content: "Related Works";
+}
+
+/* hits */
+.stats dd.hits::after {
+  content: "Hits";
+}
+
+/* collections */
+.stats dd.collections::after {
+  content: "Collections";
+}
+
+/* date published */
+.stats dd.published::after {
+  content: "Published";
+}
+
+/* date updated/completed */
+.stats dd.status::after {
+  content: "Updated";
+}
+
+/* completion status (series) */
+.series.meta.group .stats dd:nth-of-type(3)::after {
+  content: "Complete";
+}
+
+/* subscriptions (statistics page) */
+.stats dd.subscriptions::after {
+  content: "Subscriptions";
+}
+
+/* comment threads (statistics page) */
+.statistics .stats dd.comments::after {
+  content: "Comment Threads";
+}
+
+/* fandoms */
+.stats dd:has(a[href$=fandoms])::after,
+.tagset .stats dd:nth-of-type(1)::after {
+  content: "Fandoms";
+}
+
+/* tagsets: characters */
+.tagset .stats dd:nth-of-type(2)::after {
+  content: "Characters";
+}
+
+/* tagests: relationships */
+.tagset .stats dd:nth-of-type(3)::after {
+  content: "Relationships";
+}
+
+/* tagsets: additional tags*/
+.tagset .stats dd:nth-of-type(4)::after {
+  content: "Additional Tags";
+}
+
+/* tagsets: freeform tags */
+.tagset .meta .stats dd:nth-of-type(4)::after {
+  content: "Freeforms";
+}
+
+/* collections: promts/requests */
+.stats dd:has(a[href$=requests])::after {
+  content: "Prompts";
+}
+
+/* collections: challenges/subcollections */
+.collections-index .stats dd:has(a[href$=collections])::after {
+  content: "Challenges/Subcollections";
+}
+
+/* collections: bookmarked items */
+.collection.blurb .stats dd:has(a[href$=bookmarks])::after  {
+  content: "Bookmarked Items";
+}
+
+/* this is to prevent the hover text from getting cut off in some places */
+/* haven't found a better solution yet :/ */
+.statistics .stats dd.bookmarks::after,
+.statistics .stats dd.comments::after,
+.index .stats dd:last-of-type:has(a[href$=bookmarks])::after,
+.stats dd.inspired::after,
+.tagset .index .stats dd:last-of-type::after {
+  left: unset;
+  right: 0;
+}
