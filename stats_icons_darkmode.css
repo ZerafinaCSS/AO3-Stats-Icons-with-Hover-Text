@@ -4,6 +4,30 @@ STATS ICONS
 ============================================================
 */
 
+/*======= general formatting/styling stuff =======*/
+
+.stats a,
+.stats a:visited:hover {
+  border: none; /* removes underline from links */
+  color: #5998D6; /* link color */
+}
+
+.stats a:hover,
+.stats a:visited {
+  color: #999; /* color of link hover and visited links */
+}
+
+.stats a:visited:hover {
+  color: #111; /* hover color for visited links */
+}
+
+/* slight adjustments to align stats with other elements */
+/* not the prettiest solution but it works ... */
+dl.stats {
+  margin-left: -0.25em;
+  margin-right: -0.25em;
+}
+
 /*======= setup for the stats icons =======*/
 
 /* hide the text before the stats */
