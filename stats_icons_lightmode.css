@@ -1,8 +1,6 @@
-/*
-============================================================
+/*============================================================
 STATS ICONS
-============================================================
-*/
+============================================================*/
 
 /*======= general formatting/styling stuff =======*/
 
@@ -165,41 +163,31 @@ dl.stats {
   background: url(https://images.squidge.org/images/2024/05/05/stats_icon_tags-freeform_black.png);
 }
 
-/*
-============================================================
+/*============================================================
 STATS HOVER TEXT
-============================================================
-*/
+============================================================*/
 
 /*======= general formatting/styling stuff =======*/
 
-.stats dd {
-  position: relative;
-  display: inline-block;
-}
-
 /* text container (tooltip) */
 .stats dd::after {
-  visibility: hidden;
+  display: none;
   position: absolute;
   z-index: 99999;
-  width: fit-content;
+  margin: 2em 0 0 -3.5em;
   padding: 0.3em;
   border-radius: 0.25em;
   border: 1px solid #67676c;
   background: #f9f9fb;
   color: #2a2a2a;
-  font-size: 0.85em;
+  font-size: .85em;
   line-height: 1em;
   text-align: center;
-  top: 100%;
-  left: 50%;
-  right: 50%;
 }
 
 /* makes text appear on hover */
 .stats dd:hover::after {
-  visibility: visible;
+  display: inline-block;
 }
 
 /*======= hover text for individual stats =======*/
