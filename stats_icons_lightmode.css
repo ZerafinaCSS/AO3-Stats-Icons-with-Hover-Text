@@ -174,20 +174,31 @@ STATS HOVER TEXT
   display: none;
   position: absolute;
   z-index: 99999;
-  margin: 2em 0 0 -3.5em;
+  margin: 2em 0 0 -4em;
   padding: 0.3em;
   border-radius: 0.25em;
   border: 1px solid #67676c;
   background: #f9f9fb;
   color: #2a2a2a;
-  font-size: .85em;
+  font-size: 0.85em;
   line-height: 1em;
   text-align: center;
+  word-break: break-word; /* prevent overflow by breaking the word if necessary */
+  white-space: normal; /* see comment above */
 }
 
 /* makes text appear on hover */
 .stats dd:hover::after {
   display: inline-block;
+}
+
+/* this is to prevent the hover text from breaking or getting cut off in some places */
+/* haven't found a better solution yet :/ */
+.statistics .stats dd:last-of-type::after,
+.index .stats dd:last-of-type:has(a[href$=bookmarks])::after,
+.stats dd.inspired::after,
+.tagset .index .stats dd:last-of-type::after {
+  right: 0;
 }
 
 /*======= hover text for individual stats =======*/
@@ -307,15 +318,4 @@ STATS HOVER TEXT
 /* collections: bookmarked items */
 .collection.blurb .stats dd:has(a[href$=bookmarks])::after  {
   content: "Bookmarked Items";
-}
-
-/* this is to prevent the hover text from getting cut off in some places */
-/* haven't found a better solution yet :/ */
-.statistics .stats dd.bookmarks::after,
-.statistics .stats dd.comments::after,
-.index .stats dd:last-of-type:has(a[href$=bookmarks])::after,
-.stats dd.inspired::after,
-.tagset .index .stats dd:last-of-type::after {
-  left: unset;
-  right: 0;
 }
