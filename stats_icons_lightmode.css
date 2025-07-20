@@ -1,6 +1,17 @@
 /*============================================================
-STATS ICONS
+STATS ICONS - light mode version
 ============================================================*/
+/* inspired by the "Tide" skin by ElectricAlice */
+
+/*
+stats can be found here on AO3:
+- works (blurb and meta)
+- bookmarks - watch out for bookmarked series and external bookmarks!
+- series (list and series meta)
+- collections list
+- tagsets (list and tagset page)
+- own statistics page
+*/
 
 /*======= general formatting/styling stuff =======*/
 
@@ -22,8 +33,7 @@ STATS ICONS
 /* slight adjustments to align stats with other elements */
 /* not the prettiest solution but it works ... */
 dl.stats {
-  margin-left: -0.25em;
-  margin-right: -0.25em;
+  margin-right: -0.5em;
 }
 
 /*======= setup for the stats icons =======*/
@@ -40,8 +50,8 @@ dl.stats {
   margin-bottom: -0.1em;
   margin-right: 5px;
   content: "";
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center;
   filter: invert(79%) sepia(0%) saturate(14%) hue-rotate(185deg) brightness(87%) contrast(87%); /* changes the color of the icons from black to gray */
 }
@@ -50,124 +60,125 @@ dl.stats {
 
 /* language */
 .stats dd.language::before {
-  background: url(https://images.squidge.org/images/2024/05/05/stats_icon_language_black.png);
+  background-image: url("https://i.ibb.co/KzD2KWZv/zerafina-stats-icon-language-01.png");
 }
 
 /* words */
 .stats dd.words::before {
-  background: url(https://images.squidge.org/images/2024/05/05/stats_icon_words_black.png);
+  background-image: url("https://i.ibb.co/7x2N2zV8/zerafina-stats-icon-words-01.png");
 }
 
 /* works */
 .stats dd.works::before,
 .stats dd:has(a[href$=works])::before /* works in collection */ {
-  background: url(https://images.squidge.org/images/2024/05/05/stats_icon_works_black.png);
+  background-image: url("https://i.ibb.co/twZf0RM9/zerafina-stats-icon-works-01.png");
 }
 
 /* chapters */
 .stats dd.chapters::before {
-  background: url(https://images.squidge.org/images/2024/05/05/stats_icon_chapters_black.png);
+  background-image: url("https://i.ibb.co/JRpLfkgf/zerafina-stats-icon-chapters-01.png");
 }
 
 /* comments */
 .stats dd.comments::before {
-  background: url(https://images.squidge.org/images/2024/05/05/stats_icon_comments_black.png);
+  background-image: url("https://i.ibb.co/3YTgryH2/zerafina-stats-icon-comments-01.png");
 }
 
 /* kudos */
 .stats dd.kudos::before {
-  background: url(https://images.squidge.org/images/2024/05/05/stats_icon_kudos_black.png);
+  background-image: url("https://i.ibb.co/5gPnsXN4/zerafina-stats-icon-kudos-01.png");
 }
 
 /* bookmarks */
 .stats dd.bookmarks::before {
-  background: url(https://images.squidge.org/images/2024/05/05/stats_icon_bookmarks_black.png);
+  background-image: url("https://i.ibb.co/RTCp3HDc/zerafina-stats-icon-bookmarks-01.png");
   margin-right: 2px !important; /* needs less space, as the icon is narrower than the others */
 }
 
 /* related works (external bookmarks) */
 .stats dd.inspired::before {
-  background: url(https://images.squidge.org/images/2024/05/05/stats_icon_related-works_black.png);
+  background-image: url("https://i.ibb.co/rGDJWrbZ/zerafina-stats-icon-related-works-01.png");
 }
 
 /* hits */
 .stats dd.hits::before {
-  background: url(https://images.squidge.org/images/2024/05/05/stats_icon_hits_black.png);
+  background-image: url("https://i.ibb.co/Zz7mY8yL/zerafina-stats-icon-hits-01.png");
 }
 
 /* collections */
 .stats dd.collections::before,
 .stats dd:has(a[href$=collections])::before /* subcollections*/ {
-  background: url(https://images.squidge.org/images/2024/05/05/stats_icon_collection_black.png);
+  background: url("https://i.ibb.co/ks5VXnDZ/zerafina-stats-icon-collection-01.png");
 }
 
 /* date published */
 .stats dd.published::before {
-  background: url(https://images.squidge.org/images/2024/05/05/stats_icon_published_black.png);
+  background-image: url("https://i.ibb.co/DDmDb5sP/zerafina-stats-icon-published-01.png");
 }
 
 /* date updated/completed */
 /* I have not found a way to display a different icon for each case */
 .stats dd.status::before {
-  background: url(https://images.squidge.org/images/2024/05/05/stats_icon_updated_black.png);
+  background-image: url("https://i.ibb.co/Y7zRgwS3/zerafina-stats-icon-updated-01.png");
 }
 
 /* completion status (series) */
 .series.meta.group .stats dd:nth-of-type(3)::before {
-  background: url(https://images.squidge.org/images/2024/05/05/stats_icon_complete_black.png);
+  background-image: url("https://i.ibb.co/S7vdPxLc/zerafina-stats-icon-complete-01.png");
 }
 
 /* subscriptions (statistics page) */
 .stats dd.subscriptions::before {
-  background: url(https://images.squidge.org/images/2024/05/05/stats_icon_subscriptions_black.png);
+  background-image: url("https://i.ibb.co/VY57wxPD/zerafina-stats-icon-subscriptions-01.png");
 }
 
 /* comment threads (statistics page) */
 .statistics .stats dd.comments::before {
-  background: url(https://images.squidge.org/images/2024/05/05/stats_icon_comment-threads_black.png);
+  background-image: url("https://i.ibb.co/078f2nh/zerafina-stats-icon-comment-threads-01.png");
 }
 
 /* fandoms */
 .stats dd:has(a[href$=fandoms])::before,
 .tagset .stats dd:nth-of-type(1)::before {
-  background: url(https://images.squidge.org/images/2024/05/05/stats_icon_fandoms_black.png);
+  background: url("https://i.ibb.co/tPpqR5g3/zerafina-stats-icon-fandoms-01.png");
 }
 
 /* collections: bookmarked items */
-.collection.blurb .stats dd:has(a[href$=bookmarks])::before  {
-  background: url(https://images.squidge.org/images/2024/05/05/stats_icons_bookmarked-items_black.png);
+.collection.blurb .stats dd:has(a[href$=bookmarks])::before {
+  background-image: url("https://i.ibb.co/h5cy7x0/zerafina-stats-icon-bookmarked-items-01.png");
 }
 
 /* collections: promts/requests */
 .stats dd:has(a[href$=requests])::before {
-  background: url(https://images.squidge.org/images/2024/05/05/stats_icon_promts_black.png);
+  background-image: url("https://i.ibb.co/tSm91Kw/zerafina-stats-icon-promts-01.png");
 }
 
 /* tagsets: characters */
 .tagset .stats dd:nth-of-type(2)::before {
-  background: url(https://images.squidge.org/images/2024/05/05/stats_icon_characters_black.png);
+  background-image: url("https://i.ibb.co/G4FxyzRY/zerafina-stats-icon-characters-01.png");
 }
 
 /* tagests: relationships */
 .tagset .stats dd:nth-of-type(3)::before {
-  background: url(https://images.squidge.org/images/2024/05/05/stats_icon_relationships_black.png);
+  background-image: url("https://i.ibb.co/sJdDTdTq/zerafina-stats-icon-relationships-01.png");
 }
 
 /* tagsets: additional tags*/
 .tagset .stats dd:nth-of-type(4)::before {
-  background: url(https://images.squidge.org/images/2024/05/05/stats_icon_tags-additional_black.png);
+  background-image: url("https://i.ibb.co/HLPwzwMh/zerafina-stats-icon-tags-additional-01.png");
 }
 
 /* tagsets: freeform tags *//* example: https://archiveofourown.org/tag_sets/19213 */
 .tagset .meta .stats dd:nth-of-type(4)::before {
-  background: url(https://images.squidge.org/images/2024/05/05/stats_icon_tags-freeform_black.png);
+  background-image: url("https://i.ibb.co/ynKkVZyk/zerafina-stats-icon-tags-freeform-01.png");
 }
 
 /*============================================================
 STATS HOVER TEXT
 ============================================================*/
+/* just delete the following part of the code if you don't want the hover text */
 
-/*======= general formatting/styling stuff =======*/
+/*======= general formatting/styling =======*/
 
 /* text container (tooltip) */
 .stats dd::after {
@@ -316,6 +327,6 @@ STATS HOVER TEXT
 }
 
 /* collections: bookmarked items */
-.collection.blurb .stats dd:has(a[href$=bookmarks])::after  {
+.collection.blurb .stats dd:has(a[href$=bookmarks])::after {
   content: "Bookmarked Items";
 }
