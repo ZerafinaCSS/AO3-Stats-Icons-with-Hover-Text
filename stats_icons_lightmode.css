@@ -30,20 +30,27 @@ stats can be found here on AO3:
   color: #111; /* hover color for visited links */
 }
 
+/* adjust space on right side */
+.stats:not(.skins .stats) dd {
+  margin-inline: 0 1em;
+  padding: 0;
+}
+
 /* slight adjustments to align stats with other elements */
 /* not the prettiest solution but it works ... */
 dl.stats {
-  margin-right: -0.5em;
+  margin-right: -1em;
+  word-spacing: -0.3em;
 }
 
 /*======= setup for the stats icons =======*/
 
 /* hide the text before the stats */
-.stats dt:not(.skins .stats dt) {
+.stats:not(.skins .stats) dt {
   display: none;
 }
 
-.stats dd:not(.skins .stats dd)::before {
+.stats:not(.skins .stats) dd::before {
   display: inline-block;
   width: 1em;
   height: 1em;
@@ -108,7 +115,7 @@ dl.stats {
 /* collections */
 .stats dd.collections::before,
 .stats dd:has(a[href$=collections])::before /* subcollections*/ {
-  background: url("https://i.ibb.co/ks5VXnDZ/zerafina-stats-icon-collection-01.png");
+  background-image: url("https://i.ibb.co/ks5VXnDZ/zerafina-stats-icon-collection-01.png");
 }
 
 /* date published */
@@ -140,7 +147,7 @@ dl.stats {
 /* fandoms */
 .stats dd:has(a[href$=fandoms])::before,
 .tagset .stats dd:nth-of-type(1)::before {
-  background: url("https://i.ibb.co/tPpqR5g3/zerafina-stats-icon-fandoms-01.png");
+  background-image: url("https://i.ibb.co/tPpqR5g3/zerafina-stats-icon-fandoms-01.png");
 }
 
 /* collections: bookmarked items */
