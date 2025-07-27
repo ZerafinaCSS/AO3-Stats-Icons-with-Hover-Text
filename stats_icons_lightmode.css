@@ -38,9 +38,13 @@ stats can be found here on AO3:
 
 /* slight adjustments to align stats with other elements */
 /* not the prettiest solution but it works ... */
-dl.stats {
+dl.stats:not(.skins .stats) {
   margin-right: -1em;
   word-spacing: -0.3em;
+}
+
+dl.meta.statistics dd {
+  padding-left: 5px;
 }
 
 /*======= setup for the stats icons =======*/
@@ -50,7 +54,8 @@ dl.stats {
   display: none;
 }
 
-.stats:not(.skins .stats) dd::before {
+.stats:not(.skins .stats) dd::before,
+dl.statistics dt::before {
   display: inline-block;
   width: 1em;
   height: 1em;
@@ -71,7 +76,8 @@ dl.stats {
 }
 
 /* words */
-.stats dd.words::before {
+.stats dd.words::before,
+dl.statistics dt.words::before {
   background-image: url("https://i.ibb.co/7x2N2zV8/zerafina-stats-icon-words-01.png");
 }
 
@@ -92,14 +98,15 @@ dl.stats {
 }
 
 /* kudos */
-.stats dd.kudos::before {
+.stats dd.kudos::before,
+dl.statistics dt.kudos::before {
   background-image: url("https://i.ibb.co/5gPnsXN4/zerafina-stats-icon-kudos-01.png");
 }
 
 /* bookmarks */
-.stats dd.bookmarks::before {
-  background-image: url("https://i.ibb.co/RTCp3HDc/zerafina-stats-icon-bookmarks-01.png");
-  margin-right: 2px !important; /* needs less space, as the icon is narrower than the others */
+.stats dd.bookmarks::before,
+dl.statistics dt.bookmarks::before {
+  background-image: url("https://i.ibb.co/DDgZz4Gw/zerafina-stats-icon-bookmarks-02.png");
 }
 
 /* related works (external bookmarks) */
@@ -108,7 +115,8 @@ dl.stats {
 }
 
 /* hits */
-.stats dd.hits::before {
+.stats dd.hits::before,
+dl.statistics dt.hits::before {
   background-image: url("https://i.ibb.co/Zz7mY8yL/zerafina-stats-icon-hits-01.png");
 }
 
@@ -135,12 +143,14 @@ dl.stats {
 }
 
 /* subscriptions (statistics page) */
-.stats dd.subscriptions::before {
+.stats dd.subscriptions::before,
+dl.statistics dt.subscriptions::before {
   background-image: url("https://i.ibb.co/VY57wxPD/zerafina-stats-icon-subscriptions-01.png");
 }
 
 /* comment threads (statistics page) */
-.statistics .stats dd.comments::before {
+.statistics .stats dd.comments::before,
+dl.statistics dt.comment::before {
   background-image: url("https://i.ibb.co/078f2nh/zerafina-stats-icon-comment-threads-01.png");
 }
 
