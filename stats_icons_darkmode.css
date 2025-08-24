@@ -13,7 +13,7 @@ stats can be found here on AO3:
 - own statistics page
 */
 
-/*======= general formatting/styling stuff =======*/
+/*========== stats link text ==========*/
 
 .stats a,
 .stats a:visited:hover {
@@ -30,45 +30,63 @@ stats can be found here on AO3:
   color: #111; /* hover color for visited links */
 }
 
-/* adjust space on right side */
-.stats:not(.skins .stats) dd {
-  margin-inline: 0 1em;
+/*========== stats placement + spacing ==========*/
+
+/* reset margin and padding */
+dl.stats dd,
+dl.stats dt,
+.meta .stats dl dd {
+  margin: 0;
   padding: 0;
 }
 
-/* slight adjustments to align stats with other elements */
-/* not the prettiest solution but it works ... */
-dl.stats:not(.skins .stats) {
-  margin-right: -1em;
-  word-spacing: -0.3em;
+dl.stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+  column-gap: 1em; /* gap between individual stats */
 }
 
+/* stats in meta boxes should be left-aligned */
+.meta dl.stats {
+  justify-content: left;
+}
+
+/* indent for stats icons in meta box on statistics page */
 dl.meta.statistics dd {
   padding-left: 5px;
 }
 
-/*======= setup for the stats icons =======*/
+/* position of icon in relation to corresponding value */
+dl.stats dd,
+dl.statistics dt {
+  display: flex;
+  column-gap: 5px;
+  align-items: center;
+}
+
+/*========== setup for the stats icons ==========*/
 
 /* hide the text before the stats */
 .stats:not(.skins .stats) dt {
   display: none;
 }
 
+/* styling the icons */
 .stats:not(.skins .stats) dd::before,
 dl.statistics dt::before {
   display: inline-block;
+  content: "";
   width: 1em;
   height: 1em;
-  margin-bottom: -0.1em;
-  margin-right: 5px;
-  content: "";
+  transform: translate(0, -1px);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   filter: invert(79%) sepia(0%) saturate(14%) hue-rotate(185deg) brightness(87%) contrast(87%); /* changes the color of the icons from black to gray */
 }
 
-/*======= stats icons (images) =======*/
+/*========== stats icons (images) ==========*/
 
 /* language */
 .stats dd.language::before {
@@ -108,7 +126,6 @@ dl.statistics dt.kudos::before {
 dl.statistics dt.bookmarks::before {
   background-image: url("https://i.ibb.co/DDgZz4Gw/zerafina-stats-icon-bookmarks-02.png");
 }
-
 
 /* related works (external bookmarks) */
 .stats dd.inspired::before {
@@ -202,18 +219,16 @@ STATS HOVER TEXT
 .stats dd::after {
   display: none;
   position: absolute;
-  z-index: 99999;
-  margin: 2em 0 0 -4em;
+  top: 2em;
   padding: 0.3em;
-  border-radius: 0.25em;
   border: 1px solid #555;
-  background: #2a2a2a;
-  color: #eee;
+  border-radius: 0.25rem;
+  background: #2A2A2A;
+  color: #EEE;
   font-size: 0.85em;
-  line-height: 1em;
+  line-height: 1;
   text-align: center;
-  word-break: break-word; /* prevent overflow by breaking the word if necessary */
-  white-space: normal; /* see comment above */
+  z-index: 99999;
 }
 
 /* makes text appear on hover */
@@ -230,7 +245,7 @@ STATS HOVER TEXT
   right: 0;
 }
 
-/*======= hover text for individual stats =======*/
+/*========== hover text for individual stats ==========*/
 
 /* language */
 .stats dd.language::after {
