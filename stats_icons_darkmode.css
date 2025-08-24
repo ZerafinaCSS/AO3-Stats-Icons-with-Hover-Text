@@ -215,6 +215,11 @@ STATS HOVER TEXT
 
 /*======= general formatting/styling =======*/
 
+dl.stats dd {
+  position: relative;
+  justify-content: center;
+}
+
 /* text container (tooltip) */
 .stats dd::after {
   display: none;
