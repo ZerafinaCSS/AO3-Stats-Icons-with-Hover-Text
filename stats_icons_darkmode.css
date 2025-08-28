@@ -54,14 +54,13 @@ dl.stats {
 
 /* indent for stats icons in meta box on statistics page */
 dl.meta.statistics dd {
-  padding-left: 5px;
+  padding-left: 4px; /* this should be the same as margin-right below */
 }
 
 /* position of icon in relation to corresponding value */
 dl.stats dd,
 dl.statistics dt {
   display: flex;
-  column-gap: 5px;
   align-items: center;
 }
 
@@ -79,6 +78,7 @@ dl.statistics dt::before {
   content: "";
   width: 1em;
   height: 1em;
+  margin-right: 4px;
   transform: translate(0, -1px);
   background-size: contain;
   background-repeat: no-repeat;
@@ -213,7 +213,7 @@ STATS HOVER TEXT
 ============================================================*/
 /* just delete the following part of the code if you don't want the hover text */
 
-/*======= general formatting/styling =======*/
+/*========== general formatting/styling ==========*/
 
 dl.stats dd {
   position: relative;
