@@ -61,7 +61,7 @@ dl.meta.statistics dd {
 dl.stats dd,
 dl.statistics dt {
   display: flex;
-  align-items: center;
+  align-items: baseline;
 }
 
 /*========== setup for the stats icons ==========*/
@@ -79,7 +79,7 @@ dl.statistics dt::before {
   width: 1em;
   height: 1em;
   margin-right: 4px;
-  transform: translate(0, -1px);
+  transform: translate(0, 1px);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
