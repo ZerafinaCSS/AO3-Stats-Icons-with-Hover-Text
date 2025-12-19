@@ -90,122 +90,122 @@ dl.statistics dt::before {
 
 /* language */
 .stats dd.language::before {
-  background-image: url("https://i.ibb.co/KzD2KWZv/zerafina-stats-icon-language-01.png");
+  background-image: url("https://zerafinacss.github.io/ao3/stats-icons/language-01.png");
 }
 
 /* words */
 .stats dd.words::before,
 dl.statistics dt.words::before {
-  background-image: url("https://i.ibb.co/7x2N2zV8/zerafina-stats-icon-words-01.png");
+  background-image: url("https://zerafinacss.github.io/ao3/stats-icons/words-01.png");
 }
 
 /* works */
 .stats dd.works::before,
 .stats dd:has(a[href$=works])::before /* works in collection */ {
-  background-image: url("https://i.ibb.co/twZf0RM9/zerafina-stats-icon-works-01.png");
+  background-image: url("https://zerafinacss.github.io/ao3/stats-icons/works-01.png");
 }
 
 /* chapters */
 .stats dd.chapters::before {
-  background-image: url("https://i.ibb.co/JRpLfkgf/zerafina-stats-icon-chapters-01.png");
+  background-image: url("https://zerafinacss.github.io/ao3/stats-icons/chapters-01.png");
 }
 
 /* comments */
 .stats dd.comments::before {
-  background-image: url("https://i.ibb.co/3YTgryH2/zerafina-stats-icon-comments-01.png");
+  background-image: url("https://zerafinacss.github.io/ao3/stats-icons/comments-01.png");
 }
 
 /* kudos */
 .stats dd.kudos::before,
 dl.statistics dt.kudos::before {
-  background-image: url("https://i.ibb.co/5gPnsXN4/zerafina-stats-icon-kudos-01.png");
+  background-image: url("https://zerafinacss.github.io/ao3/stats-icons/kudos-01.png");
 }
 
 /* bookmarks */
 .stats dd.bookmarks::before,
 dl.statistics dt.bookmarks::before {
-  background-image: url("https://i.ibb.co/DDgZz4Gw/zerafina-stats-icon-bookmarks-02.png");
+  background-image: url("https://zerafinacss.github.io/ao3/stats-icons/bookmarks-01.png");
 }
 
 /* related works (external bookmarks) */
 .stats dd.inspired::before {
-  background-image: url("https://i.ibb.co/rGDJWrbZ/zerafina-stats-icon-related-works-01.png");
+  background-image: url("https://zerafinacss.github.io/ao3/stats-icons/related-works-01.png");
 }
 
 /* hits */
 .stats dd.hits::before,
 dl.statistics dt.hits::before {
-  background-image: url("https://i.ibb.co/Zz7mY8yL/zerafina-stats-icon-hits-01.png");
+  background-image: url("https://zerafinacss.github.io/ao3/stats-icons/hits-01.png");
 }
 
 /* collections */
 .stats dd.collections::before,
 .stats dd:has(a[href$=collections])::before /* subcollections*/ {
-  background-image: url("https://i.ibb.co/ks5VXnDZ/zerafina-stats-icon-collection-01.png");
+  background-image: url("https://zerafinacss.github.io/ao3/stats-icons/collection-01.png");
 }
 
 /* date published */
 .stats dd.published::before {
-  background-image: url("https://i.ibb.co/DDmDb5sP/zerafina-stats-icon-published-01.png");
+  background-image: url("https://zerafinacss.github.io/ao3/stats-icons/published-01.png");
 }
 
 /* date updated/completed */
 /* I have not found a way to display a different icon for each case */
 .stats dd.status::before {
-  background-image: url("https://i.ibb.co/Y7zRgwS3/zerafina-stats-icon-updated-01.png");
+  background-image: url("https://zerafinacss.github.io/ao3/stats-icons/updated-01.png");
 }
 
 /* completion status (series) */
 .series.meta.group .stats dd:nth-of-type(3)::before {
-  background-image: url("https://i.ibb.co/S7vdPxLc/zerafina-stats-icon-complete-01.png");
+  background-image: url("https://zerafinacss.github.io/ao3/stats-icons/complete-01.png");
 }
 
 /* subscriptions (statistics page) */
 .stats dd.subscriptions::before,
 dl.statistics dt.subscriptions::before {
-  background-image: url("https://i.ibb.co/VY57wxPD/zerafina-stats-icon-subscriptions-01.png");
+  background-image: url("https://zerafinacss.github.io/ao3/stats-icons/subscriptions-01.png");
 }
 
 /* comment threads (statistics page) */
 .statistics .stats dd.comments::before,
 dl.statistics dt.comment::before {
-  background-image: url("https://i.ibb.co/078f2nh/zerafina-stats-icon-comment-threads-01.png");
+  background-image: url("https://zerafinacss.github.io/ao3/stats-icons/comment-threads-01.png");
 }
 
 /* fandoms */
 .stats dd:has(a[href$=fandoms])::before,
 .tagset .stats dd:nth-of-type(1)::before {
-  background-image: url("https://i.ibb.co/tPpqR5g3/zerafina-stats-icon-fandoms-01.png");
+  background-image: url("https://zerafinacss.github.io/ao3/stats-icons/fandoms-01.png");
 }
 
 /* collections: bookmarked items */
 .collection.blurb .stats dd:has(a[href$=bookmarks])::before {
-  background-image: url("https://i.ibb.co/h5cy7x0/zerafina-stats-icon-bookmarked-items-01.png");
+  background-image: url("https://zerafinacss.github.io/ao3/stats-icons/bookmarked-items-01.png");
 }
 
 /* collections: promts/requests */
 .stats dd:has(a[href$=requests])::before {
-  background-image: url("https://i.ibb.co/tSm91Kw/zerafina-stats-icon-promts-01.png");
+  background-image: url("https://zerafinacss.github.io/ao3/stats-icons/promts-01.png");
 }
 
 /* tagsets: characters */
 .tagset .stats dd:nth-of-type(2)::before {
-  background-image: url("https://i.ibb.co/G4FxyzRY/zerafina-stats-icon-characters-01.png");
+  background-image: url("https://zerafinacss.github.io/ao3/stats-icons/characters-01.png");
 }
 
 /* tagests: relationships */
 .tagset .stats dd:nth-of-type(3)::before {
-  background-image: url("https://i.ibb.co/sJdDTdTq/zerafina-stats-icon-relationships-01.png");
+  background-image: url("https://zerafinacss.github.io/ao3/stats-icons/relationships-01.png");
 }
 
 /* tagsets: additional tags*/
 .tagset .stats dd:nth-of-type(4)::before {
-  background-image: url("https://i.ibb.co/HLPwzwMh/zerafina-stats-icon-tags-additional-01.png");
+  background-image: url("https://zerafinacss.github.io/ao3/stats-icons/tags-additional-01.png");
 }
 
 /* tagsets: freeform tags *//* example: https://archiveofourown.org/tag_sets/19213 */
 .tagset .meta .stats dd:nth-of-type(4)::before {
-  background-image: url("https://i.ibb.co/ynKkVZyk/zerafina-stats-icon-tags-freeform-01.png");
+  background-image: url("https://zerafinacss.github.io/ao3/stats-icons/tags-freeform-01.png");
 }
 
 /*============================================================

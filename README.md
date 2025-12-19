@@ -4,3 +4,5 @@ A site skin that replaces stats labels like "words", "bookmarks" and "hits" with
 Visit the [corresponding AO3 work](https://archiveofourown.org/works/55604875) to find out more.
 
 Inspired by the ["Tide" skin by ElectricAlice](https://github.com/electricalice/Ao3-tide).
+
+![Rainbow Icons Preview](https://repository-images.githubusercontent.com/871993051/ae049629-c792-427f-9070-1f04ea77929c)
