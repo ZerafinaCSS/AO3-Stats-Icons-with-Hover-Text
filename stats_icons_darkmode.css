@@ -1,17 +1,33 @@
 /*============================================================
-STATS ICONS - dark mode (Reversi) version
-============================================================*/
-/* inspired by the "Tide" skin by ElectricAlice */
 
-/*
-stats can be found here on AO3:
+                 Stats Icons with Hover Text
+              Color scheme: Reversi (dark mode)
+
+                        by ZerafinaCSS
+
+==============================================================
+
+Inspired by: "Tide" by ElectricAlice
+
+
+Stats can be found here on AO3:
 - works (blurb and meta)
 - bookmarks - watch out for bookmarked series and external bookmarks!
 - series (list and series meta)
 - collections list
 - tagsets (list and tagset page)
 - own statistics page
+
 */
+
+.skin-credit {
+  content: "Stats Icons with Hover Text by ZerafinaCSS
+  https://archiveofourown.org/works/55604875";
+}
+
+/*============================================================
+STATS ICONS
+============================================================*/
 
 /*========== stats link text ==========*/
 
