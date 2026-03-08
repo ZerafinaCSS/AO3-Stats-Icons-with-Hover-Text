@@ -3,12 +3,24 @@
                  Stats Icons with Hover Text
               Color scheme: Default (light mode)
 
-                        by ZerafinaCSS
+/*==========================================================*/
 
-==============================================================
+.site-skin-metadata {
+  content: "==================================================
 
-Inspired by: "Tide" by ElectricAlice
+  - Skin:         Stats Icons with Hover Text (light mode)
+  - Author:       ZerafinaCSS [https://www.tumblr.com/zerafinacss]
+  - Instructions: https://ao3.org/works/55604875
+  - Repository:   https://github.com/ZerafinaCSS/Site-Skin-Add-Ons
+  - License:      MIT
+  - Updated:      2026-Mar-08 19:02 UTC (no code changes)
 
+  ==========================================================";
+}
+
+/*============================================================
+
+Inspired by: "Tide" by ElectricAlice: https://ao3.org/works/32660914
 
 Stats can be found here on AO3:
 - works (blurb and meta)
@@ -18,14 +30,7 @@ Stats can be found here on AO3:
 - tagsets (list and tagset page)
 - own statistics page
 
-*/
-
-.skin-credit {
-  content: "Stats Icons with Hover Text by ZerafinaCSS
-  https://archiveofourown.org/works/55604875";
-}
-
-/*============================================================
+==============================================================
 STATS ICONS
 ============================================================*/
 
